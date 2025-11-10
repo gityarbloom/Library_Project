@@ -1,1 +1,8 @@
-{}
+{
+	"1072": {
+		"ISBN": 1072,
+		"title": "Book1",
+		"author": "Author1",
+		"is_available": true
+	}
+}

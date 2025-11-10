@@ -1,3 +1,4 @@
+import os
 from user import User
 from book import Book
 import json
@@ -6,6 +7,12 @@ USERS_LIST = 'data/users.json'
 BOOKS_LIST = 'data/books.json'
 
 class Library:
+  if not os.path.exists(USERS_LIST):
+    with open(USERS_LIST, 'w') as users_file:
+      users_file.write('{}')
+  if not os.path.exists(BOOKS_LIST):
+    with open(BOOKS_LIST, 'w') as books_file:
+      books_file.write('{}')
   def __init__(self, books_list =BOOKS_LIST, users_list =USERS_LIST):
     self.books_list = books_list
     self.users_list = users_list
