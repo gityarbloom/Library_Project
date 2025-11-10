@@ -1,0 +1,26 @@
+{
+	"1004": {
+		"ISBN": 1004,
+		"title": "tit",
+		"author": "a",
+		"is_available": false
+	},
+	"1005": {
+		"ISBN": 1005,
+		"title": "tit",
+		"author": "a",
+		"is_available": false
+	},
+	"1009": {
+		"ISBN": 1009,
+		"title": "tit",
+		"author": "a",
+		"is_available": false
+	},
+	"1010": {
+		"ISBN": 1010,
+		"title": "tit",
+		"author": "a",
+		"is_available": false
+	}
+}

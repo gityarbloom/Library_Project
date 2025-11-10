@@ -1,7 +1,7 @@
 class User:
-    def __init__(self, name, last_ID_added=-1):
+    def __init__(self, name, id):
         self. name = name
-        self.id = last_ID_added + 1
+        self.id = id
         self.borrowed_books = []
         # self.book_lending_history = []
     
