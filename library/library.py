@@ -35,13 +35,18 @@ class Library:
     with open('data/books.json', 'r') as books_file:
       books = json.load(books_file)
     return [book['title'] for k,book in books.items() if book['is_available']]
-  
-  def search_book(self, search_by):
-    return
-  
+  # search by 'title', or 'author'
+  def search_book(self, search_by, search_value):
+    with open('data/books.json', 'r') as books_file:
+      books = json.load(books_file)
+    if search_by == 'title':
+      return [{book['title'], book['author']} for k,book in books.items() if search_value.lower() in book['title'].lower()]
+    elif search_by == 'author':
+      return [{book['title'], book['author']} for k,book in books.items() if search_value.lower() in book['author'].lower()]
 b = Library([], 'data/users.json')
-b.add_book(Book('tit', 'a', False))
-b.add_book(Book('tit', 'a', False))
-print(b.add_user('efraim', '123'))
-print(b.add_user('efraim', '2'))
+
+b.add_user('efraim', '326080025')
+b.add_book(Book('Book1', 'Author1',True))
+print(b.list_available_books())
+
 print(b.list_available_books())

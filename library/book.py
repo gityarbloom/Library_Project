@@ -17,10 +17,3 @@ class Book:
 
   def __str__(self):
     return f'Book Info\nISBN: {self.ISBN}\ntitle: {self.title}\nauthor: {self.author}\nbook is {'available' if self.is_available else 'not available'}'
-
-
-a = Book('a','a')
-b = Book('a','a')
-c = Book('a','a')
-
-print(a.ISBN, b.ISBN, c.ISBN)
