@@ -2,6 +2,9 @@ from pathlib import Path
 
 class Book:
   ISBN_FILE = Path('data/ISBN_counter.txt')
+  if not ISBN_FILE.exists():
+    with open(ISBN_FILE, 'w') as f:
+      f.write('1000')
 
   def __init__(self, title, author, is_available=True):
 
