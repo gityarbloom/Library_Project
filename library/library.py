@@ -35,7 +35,7 @@ class Library:
           json.dump(users, users_list, indent="\t")
   
   def borrow_book(self, user_id, book_isbn):
-    return
+    with open()
   
   def return_book(self, user_id, book_isbn):
     return
