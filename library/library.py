@@ -1,6 +1,6 @@
 import os
-from user import User
-from book import Book
+from library.user import User
+from library.book import Book
 import json
 
 USERS_LIST = 'data/users.json'
@@ -35,7 +35,7 @@ class Library:
           json.dump(users, users_list, indent="\t")
   
   def borrow_book(self, user_id, book_isbn):
-    with open()
+    pass
   
   def return_book(self, user_id, book_isbn):
     return
@@ -54,11 +54,11 @@ class Library:
       return [{book['title'], book['author']} for k,book in books.items() if search_value.lower() in book['author'].lower()]
 
 
-if __name__ == "__main__":
-  b = Library()
+# if __name__ == "__main__":
+#   b = Library()
 
-  b.add_user('efraim', '326080025')
-  b.add_book(Book('Tora', 'gad', True))
-  print(b.list_available_books())
+#   b.add_user('efraim', '326080025')
+#   b.add_book(Book('Tora', 'gad', True))
+#   print(b.list_available_books())
 
-  print(b.list_available_books())
+#   print(b.list_available_books())
