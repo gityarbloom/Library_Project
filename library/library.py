@@ -59,7 +59,7 @@ class Library:
     return [book['title'] for k,book in self.get_books_list().items() if book['is_available']]
   # search by 'title', or 'author'
   def search_book(self, search_by, search_value):
-    books = self.books
+    books = self.get_books_list()
     if search_by == 'title':
       return [{book['title'], book['author']} for k,book in books.items() if search_value.lower() in book['title'].lower()]
     elif search_by == 'author':

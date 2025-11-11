@@ -42,9 +42,22 @@ def library_menu(library):
         elif choice == "5": 
             print("\nList of available books:")
             available_books = library.list_available_books()
-            print(available_books)
-            # for book in available_books:
-            #     print(f"- {book}")
+            for book in available_books:
+                print(f"- {book}")
+            print("\nTo Save & Exit Enter 7 \nFor return to menu press on the 'ENTER KEY'")
+            choice = input()
+        elif choice == "6":
+            print("\nSearch for a book!")
+            search_by = input("Search by 'title' or 'author': ").strip().lower()
+            search_value = input(f"Please enter the {search_by}: ").strip()
+            found_books = library.search_book(search_by, search_value)
+            if found_books:
+                print("\nBooks found:")
+                print(found_books)
+                # for book in found_books:
+                #     print(f"- {book['title']} by {book['author']} (ISBN: {book['ISBN']})")
+            else:
+                print("\nNo books found matching your search criteria.")
             print("\nTo Save & Exit Enter 7 \nFor return to menu press on the 'ENTER KEY'")
             choice = input()
         elif choice == "7":
