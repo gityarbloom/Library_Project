@@ -34,6 +34,7 @@ class Library:
     if not str(user.id) in users.keys():
       users[user.id] = vars(user)
       JsonHandeling.write_json(USERS_PATH_FILE, users)
+      return user.get_info()
   
   def borrow_book(self, user_id, book_isbn):
     users = self.get_users_list()
