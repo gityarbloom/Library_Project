@@ -1,8 +1,8 @@
 import os
-from user import User
-from book import Book
-from json_handeling import JsonHandeling
-import json
+from library.user import User
+from library.book import Book
+from library.json_handeling import JsonHandeling
+
 
 USERS_PATH_FILE = 'data/users.json'
 BOOKS_PATH_FILE = 'data/books.json'
@@ -63,11 +63,3 @@ class Library:
       return [{book['title'], book['author']} for k,book in books.items() if search_value.lower() in book['title'].lower()]
     elif search_by == 'author':
       return [{book['title'], book['author']} for k,book in books.items() if search_value.lower() in book['author'].lower()]
-
-
-if __name__ == "__main__":
-  b = Library()
-
-  b.add_user('efraim', '326080025')
-  # b.borrow_book('326080025', '1009')
-  b.return_book('326080025', '1009')

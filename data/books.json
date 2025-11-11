@@ -1,8 +1,13 @@
 {
-	"1009": {
-		"ISBN": 1009,
-		"title": "mishna",
-		"author": "123",
+	"326080025": {
+		"name": "efraim",
+		"id": "326080025",
+		"borrowed_books": []
+	},
+	"1005": {
+		"ISBN": 1005,
+		"title": "efraim",
+		"author": "bla",
 		"is_available": true
 	}
 }
