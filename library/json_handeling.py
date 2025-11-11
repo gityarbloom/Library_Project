@@ -10,3 +10,5 @@ class JsonHandeling:
   def write_json(path, data:dict ={}):
     with open(path, 'w') as json_file:
       json.dump(data, json_file, indent='\t')
+
+  
