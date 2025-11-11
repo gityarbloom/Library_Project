@@ -56,7 +56,7 @@ class Library:
     JsonHandeling.write_json(BOOKS_PATH_FILE, books)
   
   def list_available_books(self): 
-    return [book['title'] for k,book in self.books.items() if book['is_available']]
+    return [book['title'] for k,book in self.get_books_list().items() if book['is_available']]
   # search by 'title', or 'author'
   def search_book(self, search_by, search_value):
     books = self.books
