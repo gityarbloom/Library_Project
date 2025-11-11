@@ -18,4 +18,4 @@ class Book:
       books_counter.write(f'{self.ISBN}')
 
   def __str__(self):
-    return f'Book Info\nISBN: {self.ISBN}\ntitle: {self.title}\nauthor: {self.author}\nbook is {'available' if self.is_available else 'not available'}'
+    return f'Book Info:\nID: {self.ISBN}\ntitle: {self.title}\nauthor: {self.author}\nbook is {'available' if self.is_available else 'not available'}'
