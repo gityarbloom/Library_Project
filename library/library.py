@@ -13,6 +13,7 @@ class Library:
   if not os.path.exists(BOOKS_LIST):
     with open(BOOKS_LIST, 'w') as books_file:
       books_file.write('{}')
+
   def __init__(self, books_list =BOOKS_LIST, users_list =USERS_LIST):
     self.books_list = books_list
     self.users_list = users_list
@@ -20,10 +21,9 @@ class Library:
   def add_book(self, book):
     with open(self.books_list, 'r') as books_file:
       books = json.load(books_file)
-      if not str(book.ISBN) in books.keys():
-        books[book.ISBN] = vars(book)
-        with open(self.books_list, 'w') as books_list:
-          books_list.write(json.dumps(books, indent="\t"))
+      books[book.ISBN] = vars(book)
+      with open(self.books_list, 'w') as books_list:
+        json.dump(books, books_list, indent='\t')
 
   def add_user(self, name, id):
     user = User(name, id)
@@ -32,7 +32,7 @@ class Library:
       if not str(user.id) in users.keys():
         users[user.id] = vars(user)
         with open(self.users_list, 'w') as users_list:
-          users_list.write(json.dumps(users, indent="\t"))
+          json.dump(users, users_list, indent="\t")
   
   def borrow_book(self, user_id, book_isbn):
     return
@@ -58,7 +58,7 @@ if __name__ == "__main__":
   b = Library()
 
   b.add_user('efraim', '326080025')
-  b.add_book(Book('Book1', 'Author1',True))
+  b.add_book(Book('Tora', 'gad', True))
   print(b.list_available_books())
 
   print(b.list_available_books())

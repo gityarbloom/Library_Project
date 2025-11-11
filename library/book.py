@@ -7,7 +7,6 @@ class Book:
       f.write('1000')
 
   def __init__(self, title, author, is_available=True):
-
     with open(Book.ISBN_FILE, 'r') as books_counter:
       self.ISBN = int(books_counter.read()) +1
 
