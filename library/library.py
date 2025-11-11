@@ -24,7 +24,7 @@ class Library:
       return JsonHandeling.read_json(self.users_file)
 
   def add_book(self, book):
-    books = self.get_users_list()
+    books = self.get_books_list()
     books[book.ISBN] = vars(book)
     JsonHandeling.write_json(BOOKS_PATH_FILE, books)
 
