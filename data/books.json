@@ -1,0 +1,14 @@
+{
+	"1001": {
+		"ISBN": 1001,
+		"title": "123",
+		"author": "1213213232",
+		"is_available": true
+	},
+	"1002": {
+		"ISBN": 1002,
+		"title": "12",
+		"author": "48965",
+		"is_available": true
+	}
+}
